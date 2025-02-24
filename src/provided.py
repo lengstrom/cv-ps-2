@@ -28,6 +28,7 @@ def gaussian_filter(
         order = [order] * ndim
     else:
         assert len(order) == ndim, "Specify the Gaussian derivative order for each dim"
+
     convfn = getattr(F, f"conv{ndim}d")
 
     # Convolve along the rows, columns, and depth (optional)
