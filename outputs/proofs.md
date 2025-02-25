@@ -15,7 +15,7 @@ This shows both the desired result and the amplitude ($c$) and phase shift ($\ph
 of the resulting sinusoid.
 
 ## Part 1.1b
-The norm of $y$ under this norm is:
+If $c$ is on the unit circle, the norm of $y$ under this norm is:
 
 $$
 \begin{align*}
