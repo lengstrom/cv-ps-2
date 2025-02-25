@@ -24,8 +24,7 @@ $$
           &= 1
 \end{align*}
 $$
-Where the second equality is from the periodicity of $\sin^2$ and the last
-equality is from the 
+Where the second equality is from the periodicity of $\sin^2$.
 
 ## Part 2.3
 
