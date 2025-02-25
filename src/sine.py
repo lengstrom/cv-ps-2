@@ -21,7 +21,7 @@ def coeffs_to_sine(
     Returns:
         A tensor of the same shape as x representing a*cos(x) + b*sin(x).
     """
-    raise NotImplementedError("Homework!")
+    return a * torch.cos(x) + b * torch.sin(x)
 
 
 def angle_to_coeffs(
@@ -39,4 +39,4 @@ def angle_to_coeffs(
     Returns:
         A tuple (cos(angle), sin(angle)) of tensors, each with the same shape as the input.
     """
-    raise NotImplementedError("Homework!")
+    return torch.cos(angle), torch.sin(angle)
