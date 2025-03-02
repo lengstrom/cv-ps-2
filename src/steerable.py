@@ -56,13 +56,16 @@ def steer_the_filter(
     return conv(img, oriented_filter(theta, sigma, **kwargs))
 
 
+import numpy as np
 def steer_the_images(
     img: Float[Tensor, "B 1 H W"], theta: float, sigma: float, **kwargs
 ) -> Float[Tensor, "B 1 H W"]:
     """
     Return the steered image convolved with a filter.
     """
-    return steer_the_filter(img, theta, sigma, **kwargs)
+    img_one = conv(img, oriented_filter(0, sigma, **kwargs))
+    img_two = conv(img, oriented_filter(np.pi/2, sigma, **kwargs))
+    return np.cos(theta) * img_one + np.sin(theta) * img_two
 
 def complex_filter(sigma, **kwargs):
     from math import cos, sin

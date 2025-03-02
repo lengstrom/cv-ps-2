@@ -31,9 +31,26 @@ $$
 Where the second equality is from the periodicity of $\sin^2$.
 
 ## Part 2.3
-
+These eigenvectors are more irregular than those of the Toeplitz matrix from
+lecture as they correspond to 2d fourier basis vectors plotted in a 1d manner
+(with the rows flattened and concatenated). If we were to plot these in two
+dimensions then the corresponding image would look much more regular. In descending
+order, the eigenvalues correspond to eigenvectors that in turn correspond to
+eigenfunctions with higher frequencies.
 
 ## Part 2.5
-
+The operators are block diagonalized. This is expected because circulant
+matrices, such as the shift operator, are block diagonalizable in the 2D fourier
+domain. This is desirable because it is easier to compute products with the
+matrix, meaning that it is efficient (and straightforward) to perform these
+kinds of operations in the fourier domain.
 
 ## Part 3.4
+The outputs are the same because the convolution operator is linear. Convolving
+the image with a linear combination of kernels is the same as linearly combining
+the convolution of the image with each kernel. This tells us that the same
+rotation in image space vs the space of oriented filters yields the same final
+result. The fact that these are identical tells us that rotating in image space
+corresponds to rotating in the fourier basis (i.e., in frequency space).
+
+
